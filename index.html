@@ -29,6 +29,15 @@
       footer {
         margin-bottom: 1.25rem;
       }
+      article a,
+      footer a {
+        color: #0073e6;
+      }
+
+      .post-list article {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+      }
       nav ul {
         list-style: none;
         padding: 0;
@@ -77,9 +86,42 @@
         </p>
       </section>
 
-      <section>
-        <h2>Latest posts</h2>
-        <p><em>Coming soon...</em></p>
+      <section
+        aria-label="Latest Blog Posts"
+        itemscope
+        itemtype="https://schema.org/Blog"
+      >
+        <header>
+          <h2 itemprop="headline">Latest Posts</h2>
+          <p>Read the newest insights and reflections from the blog.</p>
+        </header>
+
+        <div class="post-list">
+          <!-- Example Post 1 -->
+          <article
+            itemscope
+            itemtype="https://schema.org/BlogPosting"
+            itemprop="blogPost"
+          >
+            <header>
+              <h3 itemprop="headline">
+                <a href="/article/content-creation" itemprop="url">
+                  How Creating Content Online Is Making Me Improve as a Human
+                </a>
+              </h3>
+              <p>
+                <time datetime="2025-11-10" itemprop="datePublished"
+                  >November 10, 2025</time
+                >
+              </p>
+            </header>
+            <p itemprop="description">
+              A personal reflection on how streaming and content creation
+              improved communication, confidence, and professional growth —
+              beyond the metrics.
+            </p>
+          </article>
+        </div>
       </section>
     </main>
 
